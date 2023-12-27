@@ -1,0 +1,12 @@
+{
+  "extends": ["stylelint-config-recommended", "stylelint-order-config-standard"],
+  "plugins": ["stylelint-prettier", "stylelint-order"],
+  "rules": {
+    "prettier/prettier": [
+      true,
+      {
+        "severity": "error"
+      }
+    ]
+  }
+}

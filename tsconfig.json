@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
+    "target": "ESNext",
     "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
 
@@ -22,8 +22,9 @@
 
     "types": ["vite-plugin-svgr/client"],
     "baseUrl": ".",
-    "paths": { "@/*": ["/src/*"] }
+    "paths": { "@/*": ["./src/*"] }
   },
-  "include": ["src"],
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "/*.spec.ts", "build", "public","src//*.test.tsx", "src/**/*.test.ts", "src/setupTests.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

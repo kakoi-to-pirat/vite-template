@@ -1,5 +1,7 @@
 import { useState } from 'react';
+
 import ReactLogo from '@/assets/icons/react.svg?react';
+
 import s from './About.module.css';
 
 export function About() {

@@ -1,15 +1,19 @@
 import { useState } from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import viteLogo from '/vite.svg';
-import cn from 'classnames';
+
 import AboutIcon from '@/assets/icons/about.svg?react';
 import DashboardIcon from '@/assets/icons/dashboard.svg?react';
-import s from './AppLayout.module.css';
 import HomeIcon from '@/assets/icons/home.svg?react';
+import viteLogo from '@/assets/icons/logo.svg';
 import MenuIcon from '@/assets/icons/menu.svg?react';
 import MenuOpenIcon from '@/assets/icons/menu_open.svg?react';
 import NotFoundIcon from '@/assets/icons/not-found.svg?react';
 import TodoIcon from '@/assets/icons/todo.svg?react';
+import { baseUrl } from '@/routes/const';
+
+import s from './AppLayout.module.css';
+
+import cn from 'classnames';
 
 export function AppLayout() {
   const [isCollapsedNav, setIsCollapsedNav] = useState(false);
@@ -23,7 +27,7 @@ export function AppLayout() {
           <img src={viteLogo} alt='Vite logo' />
         </a>
 
-        <NavLink to='/user' className={s.header__info}>
+        <NavLink to={`${baseUrl}/user`} className={s.header__info}>
           User
         </NavLink>
       </header>
@@ -47,31 +51,34 @@ export function AppLayout() {
             </a>
           </li>
           <li>
-            <NavLink to='/' className={s.navigation__item}>
+            <NavLink to={baseUrl} className={s.navigation__item}>
               <HomeIcon className={s.navigation__icon} />
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink to='/about' className={s.navigation__item}>
+            <NavLink to={`${baseUrl}/about`} className={s.navigation__item}>
               <AboutIcon className={s.navigation__icon} />
               About
             </NavLink>
           </li>
           <li>
-            <NavLink to='/dashboard' className={s.navigation__item}>
+            <NavLink to={`${baseUrl}/dashboard`} className={s.navigation__item}>
               <DashboardIcon className={s.navigation__icon} />
               Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink to='/todo' className={s.navigation__item}>
+            <NavLink to={`${baseUrl}/todo`} className={s.navigation__item}>
               <TodoIcon className={s.navigation__icon} />
               To-Do
             </NavLink>
           </li>
           <li>
-            <NavLink to='/nothing-here' className={s.navigation__item}>
+            <NavLink
+              to={`${baseUrl}/nothing-here`}
+              className={s.navigation__item}
+            >
               <NotFoundIcon className={s.navigation__icon} />
               404
             </NavLink>

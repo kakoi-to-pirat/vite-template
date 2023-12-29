@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 12px;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.header__logo:hover img {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.header__info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  font-weight: bold;
+}
+
+.header__info svg:hover {
+  fill: var(--color-purpur);
+}

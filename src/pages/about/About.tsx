@@ -10,7 +10,7 @@ export const About = () => {
   return (
     <>
       <div>
-        <a href='https://react.dev' target='_blank'>
+        <a href='https://react.dev' target='_blank' rel='noreferrer'>
           <ReactLogo className={s.logo} />
         </a>
       </div>
@@ -25,4 +25,4 @@ export const About = () => {
       </p>
     </>
   );
-}
+};

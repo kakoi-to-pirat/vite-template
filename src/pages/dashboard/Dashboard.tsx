@@ -1,3 +1,1 @@
-export function Dashboard() {
-  return <h2>Dashboard page</h2>;
-}
+export const Dashboard = () => <h2>Dashboard page</h2>;

@@ -1,10 +1,10 @@
 import { useState } from 'react';
 
-import ReactLogo from '@/assets/icons/react.svg?react';
+import ReactLogo from '@/shared/assets/icons/react.svg?react';
 
 import s from './About.module.css';
 
-export function About() {
+export const About = () => {
   const [count, setCount] = useState(0);
 
   return (

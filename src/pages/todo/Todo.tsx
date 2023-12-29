@@ -1,3 +1,1 @@
-export function Todo() {
-  return <h2>Todo page</h2>;
-}
+export const Todo = () => <h2>Todo page</h2>;

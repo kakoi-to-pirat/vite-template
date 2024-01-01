@@ -25,6 +25,14 @@
     "paths": { "@/*": ["./src/*"] }
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "/*.spec.ts", "build", "public","src//*.test.tsx", "src/**/*.test.ts", "src/setupTests.ts"],
+  "exclude": [
+    "node_modules",
+    "/*.spec.ts",
+    "build",
+    "public",
+    "src//*.test.tsx",
+    "src/**/*.test.ts",
+    "src/setupTests.ts"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

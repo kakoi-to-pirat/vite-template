@@ -3,7 +3,7 @@ import { Link, NavLink } from 'react-router-dom';
 import viteLogo from '@/shared/assets/icons/logo.svg';
 import LogoutIcon from '@/shared/assets/icons/logout.svg?react';
 import ProfileIcon from '@/shared/assets/icons/profile.svg?react';
-import { BASE_PATH, PATH_PAGE } from '@/shared/config/paths';
+import { BASE_PATH, PATH_PAGE } from '@/shared/config';
 
 import s from './Header.module.css';
 

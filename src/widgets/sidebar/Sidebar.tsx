@@ -5,7 +5,7 @@ import DashboardIcon from '@/shared/assets/icons/dashboard.svg?react';
 import MenuIcon from '@/shared/assets/icons/menu.svg?react';
 import MenuOpenIcon from '@/shared/assets/icons/menu_open.svg?react';
 import TodoIcon from '@/shared/assets/icons/todo.svg?react';
-import { PATH_PAGE } from '@/shared/config/paths';
+import { PATH_PAGE } from '@/shared/config';
 
 import s from './Sidebar.module.css';
 

@@ -5,6 +5,8 @@ import { AddPost } from '@/features';
 import { fetchTodos } from '@/shared/api/endpoints/todo';
 import TodoIcon from '@/shared/assets/icons/todo.svg?react';
 
+import s from './Todo.module.css';
+
 const POSTS_QUERY_KEY = 'posts';
 
 export const Todo = () => {
@@ -19,10 +21,13 @@ export const Todo = () => {
 
   return (
     <>
-      <TodoIcon />
-      <h2>Список различных дел</h2>
+      <div className={s.todoHeader}>
+        <div className={s.todoHeader__title}>
+          <TodoIcon /> <h2>Список различных дел</h2>
+        </div>
 
-      <AddPost />
+        <AddPost />
+      </div>
 
       <div>
         {data &&

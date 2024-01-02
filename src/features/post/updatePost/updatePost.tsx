@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import { updateTodo } from '@/shared/api/endpoints';
 import { IPost } from '@/shared/models';
 
+import s from './updatePost.module.css';
+
 const POSTS_QUERY_KEY = 'posts';
 
 export type IPostUpdate = {
@@ -12,11 +14,13 @@ export type IPostUpdate = {
 };
 
 export const UpdatePost = ({ data, children }: IPostUpdate) => {
+  const [width, setWidth] = useState(0);
   const [height, setHeight] = useState(0);
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const elementRef = useRef<any>(null);
 
   useEffect(() => {
+    setWidth(elementRef?.current?.offsetWidth);
     setHeight(elementRef?.current?.offsetHeight);
   }, []);
 
@@ -36,22 +40,13 @@ export const UpdatePost = ({ data, children }: IPostUpdate) => {
   const { isPending } = updatePost;
 
   return (
-    <div onClick={() => onUpdatePost(data)} ref={elementRef}>
-      {isPending ? (
-        <div
-          style={{
-            height,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            backgroundColor: '#ddd',
-          }}
-        >
-          Загрузка
+    <div ref={elementRef} onClick={() => onUpdatePost(data)}>
+      {isPending && (
+        <div className={s.updatingPost} style={{ width, height }}>
+          Загрузка...
         </div>
-      ) : (
-        children
       )}
+      {children}
     </div>
   );
 };

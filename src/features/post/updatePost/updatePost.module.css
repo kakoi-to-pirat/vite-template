@@ -1,0 +1,12 @@
+.updatingPost {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  border-radius: 8px;
+  background-color: rgb(221 221 221 / 40%);
+}

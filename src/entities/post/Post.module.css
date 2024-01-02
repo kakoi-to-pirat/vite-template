@@ -1,0 +1,14 @@
+.post {
+  margin: 10px 0;
+  padding: 10px;
+
+  border-radius: 8px;
+  background: var(--color-purpur-lite);
+}
+
+.post:hover {
+  cursor: pointer;
+
+  color: var(--color-white);
+  background: var(--color-purpur);
+}

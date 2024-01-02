@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { updateTodo } from '@/shared/api/endpoints';
 import { IPost } from '@/shared/models';
 
-import s from './updatePost.module.css';
+import s from './UpdatePost.module.css';
 
 const POSTS_QUERY_KEY = 'posts';
 

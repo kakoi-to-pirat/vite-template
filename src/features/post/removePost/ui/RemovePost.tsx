@@ -1,16 +1,13 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import { IPost, IPostDto, postAPI } from '@/entities/post';
-
-const POSTS_QUERY_KEY = 'posts';
+import { IPost, IPostDto, QUERY_KEY, postAPI } from '@/entities/post';
 
 export const RemovePost = ({ data }: IPost) => {
   const queryClient = useQueryClient();
 
   const removePost = useMutation({
     mutationFn: postAPI.removePost,
-    onSuccess: () =>
-      queryClient.invalidateQueries({ queryKey: [POSTS_QUERY_KEY] }),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: [QUERY_KEY] }),
   });
 
   const onDeletePost = (

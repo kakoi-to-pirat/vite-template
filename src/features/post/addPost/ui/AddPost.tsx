@@ -1,16 +1,13 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
-import { IPostDto, postAPI } from '@/entities/post';
-
-const POSTS_QUERY_KEY = 'posts';
+import { IPostDto, QUERY_KEY, postAPI } from '@/entities/post';
 
 export const AddPost = () => {
   const queryClient = useQueryClient();
 
   const addPost = useMutation({
     mutationFn: (post: Omit<IPostDto, 'id'>) => postAPI.addPost(post),
-    onSuccess: () =>
-      queryClient.invalidateQueries({ queryKey: [POSTS_QUERY_KEY] }),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: [QUERY_KEY] }),
   });
 
   const onAddPost = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

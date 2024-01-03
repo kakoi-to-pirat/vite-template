@@ -1,16 +1,14 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { Post, postAPI } from '@/entities/post';
+import { Post, QUERY_KEY, postAPI } from '@/entities/post';
 import { AddPost, UpdatePost, RemovePost } from '@/features/post';
 import TodoIcon from '@/shared/assets/icons/todo.svg?react';
 
 import s from './Page.module.css';
 
-const POSTS_QUERY_KEY = 'posts';
-
 export const TodoPage = () => {
   const { isLoading, error, data } = useQuery({
-    queryKey: [POSTS_QUERY_KEY],
+    queryKey: [QUERY_KEY],
     queryFn: postAPI.fetchPosts,
   });
 
@@ -33,8 +31,8 @@ export const TodoPage = () => {
           data
             .sort((a, b) => b.id - a.id)
             .map((post) => (
-              <UpdatePost data={post}>
-                <Post key={post.id} data={post}>
+              <UpdatePost key={post.id} data={post}>
+                <Post data={post}>
                   <RemovePost data={post} />
                 </Post>
               </UpdatePost>

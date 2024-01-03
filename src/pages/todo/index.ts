@@ -1,1 +1,1 @@
-export * from './Todo';
+export { TodoPage } from './ui/page/Page';

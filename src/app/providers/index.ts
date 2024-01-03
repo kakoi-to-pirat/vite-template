@@ -1,2 +1,2 @@
-export * from './WithRouter';
-export * from './WithQueryClient';
+export { WithRouter } from './WithRouter';
+export { WithQueryClient } from './WithQueryClient';

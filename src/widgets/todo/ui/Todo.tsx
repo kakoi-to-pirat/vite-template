@@ -1,14 +1,16 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { Post, QUERY_KEY, postAPI } from '@/entities/post';
+import { Post } from '@/entities/post';
 import { AddPost, UpdatePost, RemovePost } from '@/features/post';
+import { postAPI } from '@/shared/api';
 import TodoIcon from '@/shared/assets/icons/todo.svg?react';
+import { POSTS_KEY } from '@/shared/lib';
 
-import s from './Page.module.css';
+import s from './Todo.module.css';
 
-export const TodoPage = () => {
+export const Todo = () => {
   const { isLoading, error, data } = useQuery({
-    queryKey: [QUERY_KEY],
+    queryKey: [POSTS_KEY],
     queryFn: postAPI.fetchPosts,
   });
 

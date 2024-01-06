@@ -2,7 +2,7 @@ import { AxiosResponse } from 'axios';
 
 import { API } from '@/shared/api';
 
-import { IPostDto } from '../model/Post.interface';
+import { IPostDto } from './post.dto';
 
 export const postAPI = {
   fetchPosts: async (): Promise<IPostDto[]> => {

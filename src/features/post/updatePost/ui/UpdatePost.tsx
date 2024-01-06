@@ -1,11 +1,15 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useEffect, useRef, useState } from 'react';
 
-import { IPostDto, QUERY_KEY, postAPI } from '@/entities/post';
+import { IPostDto, postAPI } from '@/shared/api';
+import { POSTS_KEY } from '@/shared/lib';
 
 import s from './UpdatePost.module.css';
 
-import { IPostUpdate } from '../model/UpdatePost.intreface';
+export interface IPostUpdate {
+  data: IPostDto;
+  children: React.ReactNode;
+}
 
 export const UpdatePost = ({ data, children }: IPostUpdate) => {
   const [width, setWidth] = useState(0);
@@ -22,7 +26,7 @@ export const UpdatePost = ({ data, children }: IPostUpdate) => {
 
   const updatePost = useMutation({
     mutationFn: (post: IPostDto) => postAPI.updatePost(post),
-    onSuccess: () => queryClient.invalidateQueries({ queryKey: [QUERY_KEY] }),
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: [POSTS_KEY] }),
   });
 
   const onUpdatePost = (post: IPostDto) => {

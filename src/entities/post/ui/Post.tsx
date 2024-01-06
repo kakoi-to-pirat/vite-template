@@ -1,7 +1,6 @@
 import dayjs from 'dayjs';
 
-import { IPost } from '@/entities/post';
-
+import { IPost } from './Post.intreface';
 import s from './Post.module.css';
 
 export const Post = ({ data, children }: IPost) => {

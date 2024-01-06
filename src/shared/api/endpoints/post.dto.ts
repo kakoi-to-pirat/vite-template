@@ -3,8 +3,3 @@ export interface IPostDto {
   createdAt: string;
   text: string;
 }
-
-export interface IPost {
-  data: IPostDto;
-  children?: React.ReactNode;
-}

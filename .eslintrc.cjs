@@ -21,6 +21,7 @@ module.exports = {
       { allowConstantExport: true },
     ],
     'prettier/prettier': ['warn', { endOfLine: 'auto' }],
+    'import/no-cycle': [2, { maxDepth: 1 }],
     'import/order': [
       2,
       {

@@ -1,5 +1,3 @@
-export * from './updatePost/model/UpdatePost.intreface';
-
-export { RemovePost } from './removePost/ui/RemovePost';
-export { AddPost } from './addPost/ui/AddPost';
-export { UpdatePost } from './updatePost/ui/UpdatePost';
+export { AddPost } from '@/features/post/addPost';
+export { RemovePost } from '@/features/post/removePost';
+export { UpdatePost } from '@/features/post/updatePost';

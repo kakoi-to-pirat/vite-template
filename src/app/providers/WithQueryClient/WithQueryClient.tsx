@@ -1,10 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
-const queryClient = new QueryClient();
+import { IWithQueryClientProvider } from './WithQueryClient.h';
 
-interface IWithQueryClientProvider {
-  children: React.ReactNode;
-}
+const queryClient = new QueryClient();
 
 export const WithQueryClient = ({
   children,

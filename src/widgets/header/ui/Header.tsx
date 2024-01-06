@@ -5,13 +5,10 @@ import LogoutIcon from '@/shared/assets/icons/logout.svg?react';
 import ProfileIcon from '@/shared/assets/icons/profile.svg?react';
 import { BASE_PATH, PATH_PAGE } from '@/shared/lib';
 
+import { IHeader } from './Header.h';
 import s from './Header.module.css';
 
 import cn from 'classnames';
-
-export interface IHeader {
-  className?: string;
-}
 
 export const Header = ({ className }: IHeader) => (
   <header className={cn(className, s.header)}>

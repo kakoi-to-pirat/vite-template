@@ -7,14 +7,10 @@ import MenuOpenIcon from '@/shared/assets/icons/menu_open.svg?react';
 import TodoIcon from '@/shared/assets/icons/todo.svg?react';
 import { PATH_PAGE } from '@/shared/lib';
 
+import { ISidebar } from './Sidebar.h';
 import s from './Sidebar.module.css';
 
 import cn from 'classnames';
-
-export interface ISidebar {
-  className?: string;
-  onCollapse?: () => void;
-}
 
 export const Sidebar = ({ className, onCollapse = () => null }: ISidebar) => {
   const [isCollapsed, setIsCollapsed] = useState(false);

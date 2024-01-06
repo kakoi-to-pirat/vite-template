@@ -1,9 +1,7 @@
 import { Suspense } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
-interface IWithRouter {
-  children: React.ReactNode;
-}
+import { IWithRouter } from './WithRouter.h';
 
 export const WithRouter = ({ children }: IWithRouter): JSX.Element => (
   <BrowserRouter>

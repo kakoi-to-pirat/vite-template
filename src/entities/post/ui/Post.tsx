@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import { IPost } from './Post.intreface';
+import { IPost } from './Post.h';
 import s from './Post.module.css';
 
 export const Post = ({ data, children }: IPost) => {

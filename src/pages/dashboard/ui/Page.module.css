@@ -1,0 +1,22 @@
+.dashboard__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+.dashboard__headerTitle {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.dashboard__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+.dashboard__todos {
+  width: 30%;
+}

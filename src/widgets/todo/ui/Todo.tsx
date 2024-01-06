@@ -6,9 +6,10 @@ import { postAPI } from '@/shared/api';
 import TodoIcon from '@/shared/assets/icons/todo.svg?react';
 import { POSTS_KEY } from '@/shared/lib';
 
+import { ITodo } from './Todo.h';
 import s from './Todo.module.css';
 
-export const Todo = () => {
+export const Todo = ({ className, withHeader = true }: ITodo) => {
   const { isLoading, error, data } = useQuery({
     queryKey: [POSTS_KEY],
     queryFn: postAPI.fetchPosts,
@@ -19,14 +20,16 @@ export const Todo = () => {
   if (error) return <p>Ошибка: {error.message}</p>;
 
   return (
-    <>
-      <div className={s.todoHeader}>
-        <div className={s.todoHeader__title}>
-          <TodoIcon /> <h2>Список различных дел</h2>
-        </div>
+    <div className={className}>
+      {withHeader && (
+        <div className={s.todoHeader}>
+          <div className={s.todoHeader__title}>
+            <TodoIcon /> <h2>Список различных дел</h2>
+          </div>
 
-        <AddPost />
-      </div>
+          <AddPost />
+        </div>
+      )}
 
       <div>
         {data &&
@@ -40,6 +43,6 @@ export const Todo = () => {
               </UpdatePost>
             ))}
       </div>
-    </>
+    </div>
   );
 };

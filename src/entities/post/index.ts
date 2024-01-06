@@ -1,2 +1,2 @@
-export * from './ui/Post.intreface';
+export * from './ui/Post.h';
 export { Post } from './ui/Post';

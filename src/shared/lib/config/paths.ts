@@ -8,9 +8,10 @@ export const PATH_PAGE = {
   about: `${BASE_PATH}/about`,
   page404: `${BASE_PATH}/404`,
 
-  // не используются
   login: `${BASE_PATH}/login`,
   logout: `${BASE_PATH}/logout`,
+
+  // не используются
   // profile: {
   //   root: (username: string) => `${BASE_PATH}/profile/${username}`,
   //   favorites: (username: string) =>

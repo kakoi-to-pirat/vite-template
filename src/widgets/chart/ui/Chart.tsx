@@ -6,7 +6,6 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
 } from 'recharts';
 
 const data = [
@@ -74,26 +73,24 @@ const data = [
 
 export const Chart = () => {
   return (
-    <ResponsiveContainer maxHeight={350}>
-      <BarChart
-        width={650}
-        height={300}
-        data={data}
-        margin={{
-          top: 20,
-          right: 30,
-          left: 20,
-          bottom: 5,
-        }}
-      >
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='name' />
-        <YAxis />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey='pv' stackId='a' fill='#8884d8' />
-        <Bar dataKey='uv' stackId='a' fill='#82ca9d' />
-      </BarChart>
-    </ResponsiveContainer>
+    <BarChart
+      width={650}
+      height={300}
+      data={data}
+      margin={{
+        top: 20,
+        right: 30,
+        left: 20,
+        bottom: 5,
+      }}
+    >
+      <CartesianGrid strokeDasharray='3 3' />
+      <XAxis dataKey='name' />
+      <YAxis />
+      <Tooltip />
+      <Legend />
+      <Bar dataKey='pv' stackId='a' fill='#8884d8' />
+      <Bar dataKey='uv' stackId='a' fill='#82ca9d' />
+    </BarChart>
   );
 };

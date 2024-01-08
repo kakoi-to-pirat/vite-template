@@ -8,7 +8,7 @@ export const AboutPage = () => {
   const [count, setCount] = useState(0);
 
   return (
-    <>
+    <div className={s.about}>
       <div>
         <a href='https://react.dev' target='_blank' rel='noreferrer'>
           <ReactLogo className={s.logo} />
@@ -23,6 +23,6 @@ export const AboutPage = () => {
       <p className={s.readTheDocs}>
         Click on the Vite and React logos to learn more
       </p>
-    </>
+    </div>
   );
 };
